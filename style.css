@@ -1,0 +1,174 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Lemon&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Lemon", serif;
+}
+
+body {
+    background-color: #61BDEA;
+
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    background-color: #61BDEA;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.Logo h2 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #FFFFFF;
+    letter-spacing: -1px;
+}
+
+
+.Menu {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.Menu li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.Menu li a:hover {
+    color: #000000;
+}
+
+
+.User.Menu .rightside {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    list-style: none;
+}
+
+.User.Menu .rightside img {
+    width: 24px;
+    height: 24px;
+    transition: transform 0.2s ease;
+}
+
+.User.Menu .rightside img:hover {
+    transform: scale(1.15);
+}
+
+.hero {
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    padding: 50px 8%;
+}
+
+.Container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    gap: 50px;
+}
+
+
+.Container .leftside {
+    flex: 1;
+    max-width: 550px;
+}
+
+.Container .leftside h1 {
+    font-size: 3.5rem;
+    line-height: 1.2;
+    color: #ffffff;
+    margin-bottom: 15px;
+}
+
+.Container .leftside p {
+    font-size: 1.2rem;
+    color: #ffffff;
+    margin-bottom: 35px;
+}
+
+
+.button {
+    display: inline-block;
+    padding: 12px 30px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    margin-right: 15px;
+}
+
+
+.button:nth-child(3) {
+    background-color: #ffffff;
+    border: 2px solid #375677;
+    color: #375677;
+}
+
+
+
+.button:nth-child(4) {
+    background-color: #375677;
+    border: 2px solid #ffffff;
+    color: #ffffff;
+}
+
+
+.Container .rightside {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.Container .rightside img {
+    max-width: 100%;
+    height: auto;
+    max-height: 450px;
+    object-fit: contain;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+}
+
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+    background-color: #ffffff;
+    border-top: 1px solid #ffffff;
+    text-align: center;
+    gap: 15px;
+}
+
+.Logo2 img {
+    width: 45px;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.Logo2 img:hover {
+    transform: rotate(15deg);
+}
+
+.copyrights p {
+    font-size: 0.9rem;
+    color: #000000;
+}
