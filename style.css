@@ -1,5 +1,5 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Lemon&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -7,27 +7,47 @@
     font-family: "Lemon", serif;
 }
 
-body {
-    background-color: #61BDEA;
+body{
+    background:linear-gradient(
+        135deg,
+        #FFE7EF 0%,
+        #FFC7D6 55%,
+        #F6A7BB 100%
+    );
 
+    min-height:100vh;
+
+    overflow-x:hidden;
+
+    position:relative;
 }
+
+/* ========================= */
+/* HEADER */
+/* ========================= */
 
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px 8%;
-    background-color: #61BDEA;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    background: rgba(255,255,255,.15);
+    backdrop-filter: blur(12px);
+    box-shadow:0 5px 20px rgba(0,0,0,.08);
+    animation: fadeDown .8s ease;
 }
 
 .Logo h2 {
     font-size: 1.8rem;
     font-weight: 700;
-    color: #FFFFFF;
+    color:#fff;
     letter-spacing: -1px;
+    transition: .3s;
 }
 
+.Logo h2:hover {
+    transform: scale(1.08);
+}
 
 .Menu {
     display: flex;
@@ -37,16 +57,36 @@ header {
 
 .Menu li a {
     text-decoration: none;
-    color: #ffffff;
+    color:#fff;
     font-weight: 600;
     font-size: 1rem;
-    transition: color 0.3s ease;
+    transition: .3s;
+    position: relative;
 }
 
 .Menu li a:hover {
-    color: #000000;
+    color:#EC7E9D;
+
 }
 
+.Menu li a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0%;
+    height: 2px;
+    background:#fff;
+    transition: .3s;
+}
+
+.Menu li a:hover::after {
+    width: 100%;
+}
+
+/* ========================= */
+/* USUÁRIO */
+/* ========================= */
 
 .User.Menu .rightside {
     display: flex;
@@ -58,12 +98,16 @@ header {
 .User.Menu .rightside img {
     width: 24px;
     height: 24px;
-    transition: transform 0.2s ease;
+    transition: .3s ease;
 }
 
 .User.Menu .rightside img:hover {
-    transform: scale(1.15);
+    transform: translateY(-5px) scale(1.15) rotate(10deg);
 }
+
+/* ========================= */
+/* HERO */
+/* ========================= */
 
 .hero {
     min-height: 80vh;
@@ -80,10 +124,10 @@ header {
     gap: 50px;
 }
 
-
 .Container .leftside {
     flex: 1;
     max-width: 550px;
+    animation: fadeLeft 1s ease;
 }
 
 .Container .leftside h1 {
@@ -99,6 +143,9 @@ header {
     margin-bottom: 35px;
 }
 
+/* ========================= */
+/* BOTÕES */
+/* ========================= */
 
 .button {
     display: inline-block;
@@ -107,25 +154,53 @@ header {
     text-decoration: none;
     font-weight: 600;
     font-size: 1rem;
-    transition: all 0.3s ease;
+    transition: .35s;
     margin-right: 15px;
+    position: relative;
+    overflow: hidden;
 }
 
+.button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -120%;
+    width: 60px;
+    height: 100%;
+    background: rgba(255,255,255,.4);
+    transform: skewX(-25deg);
+}
+
+.button:hover::before {
+    animation: shine .7s;
+}
+
+.button:hover {
+    transform:translateY(-5px) scale(1.05);
+
+    box-shadow:0 15px 30px rgba(236,126,157,.35);
+}
 
 .button:nth-child(3) {
-    background-color: #ffffff;
-    border: 2px solid #375677;
-    color: #375677;
+    background:#fff;
+    color:#EC7E9D;
+    border:2px solid #EC7E9D;
 }
-
-
 
 .button:nth-child(4) {
-    background-color: #375677;
-    border: 2px solid #ffffff;
-    color: #ffffff;
+    background:linear-gradient(
+        135deg,
+        #EC7E9D,
+        #F5A1B8
+    );
+
+    border:none;
+    color:#fff;
 }
 
+/* ========================= */
+/* IMAGEM */
+/* ========================= */
 
 .Container .rightside {
     flex: 1;
@@ -134,17 +209,20 @@ header {
 }
 
 .Container .rightside img {
-    max-width: 100%;
+    max-width: 110%;
     height: auto;
-    max-height: 450px;
+    max-height: 520px;
     object-fit: contain;
+    animation:
+    fadeRight 1s ease,
+    float 4s ease-in-out infinite;
+    filter:
+    drop-shadow(0 30px 40px rgba(0,0,0,.18));
 }
 
-@keyframes float {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-15px); }
-}
-
+/* ========================= */
+/* FOOTER */
+/* ========================= */
 
 footer {
     display: flex;
@@ -156,19 +234,244 @@ footer {
     border-top: 1px solid #ffffff;
     text-align: center;
     gap: 15px;
+    animation: fadeUp 1s ease;
 }
 
 .Logo2 img {
     width: 45px;
     height: auto;
-    transition: transform 0.3s ease;
+    transition: .3s ease;
 }
 
 .Logo2 img:hover {
-    transform: rotate(15deg);
+    transform: rotate(15deg) scale(1.1);
 }
 
 .copyrights p {
-    font-size: 0.9rem;
+    font-size: .9rem;
     color: #000000;
+}
+
+/* ========================= */
+/* ANIMAÇÕES */
+/* ========================= */
+
+@keyframes fadeDown {
+    from {
+        opacity: 0;
+        transform: translateY(-40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-60px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeRight {
+    from {
+        opacity: 0;
+        transform: translateX(60px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes float {
+    0%,100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-18px);
+    }
+}
+
+@keyframes shine {
+    0% {
+        left: -100%;
+    }
+    100% {
+        left: 150%;
+    }
+}
+
+/* ========================= */
+/* RESPONSIVO */
+/* ========================= */
+
+@media (max-width: 900px) {
+
+    header {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .Container {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+
+    .Container .leftside h1 {
+        font-size: 2.5rem;
+    }
+
+    .Container .leftside p {
+        font-size: 1rem;
+    }
+
+    .button {
+        margin: 10px;
+    }
+
+    .Container .rightside img {
+        max-height: 320px;
+    }
+
+    .Menu {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+/*==================================
+        FUNDO DECORATIVO
+==================================*/
+
+.background{
+
+    position:fixed;
+
+    inset:0;
+
+    overflow:hidden;
+
+    z-index:-1;
+
+}
+
+.blob{
+
+    position:absolute;
+
+    border-radius:50%;
+
+    filter:blur(90px);
+
+    opacity:.55;
+
+    animation:blobMove 18s ease-in-out infinite alternate;
+
+}
+
+.blob1{
+
+    width:450px;
+
+    height:450px;
+
+    background:#F8A4BA;
+
+    top:-120px;
+
+    left:-120px;
+
+}
+
+.blob2{
+
+    width:500px;
+
+    height:500px;
+
+    background:#FFD6E1;
+
+    top:45%;
+
+    left:65%;
+
+    animation-delay:3s;
+
+}
+
+.blob3{
+
+    width:350px;
+
+    height:350px;
+
+    background:#F7B0C0;
+
+    bottom:-100px;
+
+    left:20%;
+
+    animation-delay:6s;
+
+}
+
+.blob4{
+
+    width:280px;
+
+    height:280px;
+
+    background:#FFF2F6;
+
+    right:-60px;
+
+    top:20%;
+
+    animation-delay:9s;
+
+}
+
+@keyframes blobMove{
+
+    0%{
+
+        transform:
+        translate(0,0)
+        scale(1);
+
+    }
+
+    50%{
+
+        transform:
+        translate(60px,-40px)
+        scale(1.15);
+
+    }
+
+    100%{
+
+        transform:
+        translate(-50px,30px)
+        scale(.9);
+
+    }
+
 }
