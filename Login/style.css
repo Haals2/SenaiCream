@@ -114,23 +114,22 @@ body{
           BOTÃO
 ==========================*/
 
-button{
+.button{
+    display:inline-flex;
+    justify-content:center;
+    align-items:center;
     width:100%;
     height:55px;
-    border:none;
     border-radius:35px;
-    cursor:pointer;
+    text-decoration:none;
+    color:#fff;
     font-size:17px;
     font-weight:600;
-    color:#fff;
-    margin-top:10px;
-
     background:linear-gradient(135deg,#EC7E9D,#F5A1B8);
-
     transition:.3s;
 }
 
-button:hover{
+.button:hover{
     transform:translateY(-4px);
     box-shadow:0 15px 30px rgba(236,126,157,.35);
 }

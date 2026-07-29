@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escolha seu Sorvete | IceCream</title>
+    <link rel="stylesheet" href="sabores.css">
+</head>
+
+<body>
+
+    <header>
+
+        <div class="Logo">
+            <h2>IceCream</h2>
+        </div>
+
+        <nav class="Menu">
+            <ul>
+                <li><a href="/index.html">Inicio</a> </li>
+                <li><a href="/Sorvetes/sabores.html">Sorvetes</a></li>
+                <li><a href="/Sobre/sobre.html">Sobre</a></li>
+                <li><a href="/Contato/contato.html">Contato</a></li>
+            </ul>
+        </nav>
+
+        <div class="User">
+            <ul class="rightside">
+                <li><a href="/Login/index.html"><img src="/assets/user 1.png"></a></li>
+                <li><a href="#"><img src="/assets/basket 1.png"></a></li>
+            </ul>
+        </div>
+
+    </header>
+
+
+
+
+
+<main>
+
+
+<div class="container">
+    <section class="left">
+        <h1>Monte seu Sorvete 🍦</h1>
+<div class="categoria">
+        <h2>Frutas</h2>
+<div class="sabores">
+
+    <div class="card" onclick="selecionar(this)">
+    <img src="/Sorvetes/assets/morango.png">
+    <p>Morango</p>
+    </div>
+
+    <div class="card" onclick="selecionar(this)">
+    <img src="assets/kiwi.png">
+    <p>Kiwi</p>
+    </div>
+
+    <div class="card" onclick="selecionar(this)">
+    <img src="assets/laranja.png">
+    <p>Laranja</p>
+    </div>
+
+    <div class="card" onclick="selecionar(this)">
+    <img src="assets/melancia.png">
+    <p>Melancia</p>
+    </div>
+
+</div>
+
+</div>
+
+<div class="categoria">
+
+    <h2>Cremes</h2>
+
+<div class="sabores">
+
+    <div class="card" onclick="selecionar(this)">
+    <img src="assets/chocolate.png">
+    <p>Chocolate</p>
+    </div>
+
+
+
+    <div class="card" onclick="selecionar(this)">
+    <img src="assets/baunilha.png">
+    <p>Baunilha</p>
+    </div>
+
+
+
+    <div class="card" onclick="selecionar(this)">
+    <img src="assets/menta.png">
+    <p>Menta</p>
+    </div>
+
+
+
+    <div class="card" onclick="selecionar(this)">
+    <img src="assets/doce.png">
+    <p>Doce de Leite</p>
+    </div>
+
+</div>
+
+</div>
+
+
+<div class="categoria">
+
+    <h2>Extras</h2>
+
+<div class="sabores">
+
+    <div class="card" onclick="selecionar(this)">
+    <img src="assets/granulado.png">
+    <p>Granulado</p>
+    </div>
+
+    <div class="card" onclick="selecionar(this)">
+    <img src="assets/confete.png">
+    <p>Confete</p>
+    </div>
+
+    <div class="card" onclick="selecionar(this)">
+    <img src="assets/calda.jpg">
+    <p>Calda</p>
+    </div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<section class="right">
+
+    <h2>Seu Pedido</h2>
+
+<label>
+    Tipo de Sorvete
+</label>
+
+
+<select>
+
+    <option>Casquinha</option>
+    <option>Cascão</option>
+    <option>Copo</option>
+
+</select>
+
+<label>
+    Tamanho
+</label>
+
+<select>
+
+    <option>Pequeno</option>
+    <option>Médio</option>
+    <option>Grande</option>
+
+</select>
+
+    <h3>Sabores escolhidos</h3>
+
+<ul id="lista">
+
+</ul>
+
+<div class="total">
+
+    Total: R$ 0,00
+
+</div>
+
+<button>
+
+    Adicionar ao Carrinho 🛒
+
+</button>
+
+</section>
+
+</div>
+
+</main>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
