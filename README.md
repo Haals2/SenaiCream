@@ -1,7 +1,5 @@
 # SenaiCream — integração Node.js + Express + SQLite + JWT
 
-O ZIP do projeto original já tem o front-end. Este pacote contém os arquivos novos/alterados para integrar cadastro e login ao back-end.
-
 ## 1. Onde colocar os arquivos
 
 Copie a pasta `backend` para dentro da pasta principal `Projeto SenaiCream`. Depois substitua os arquivos existentes:
