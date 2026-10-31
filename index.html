@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SenaiCream</title>
+    <title>IceCream</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -26,11 +26,36 @@
                     <li><a href="/Contato/contato.html">Contato</a></li>
                 </nav>
                     <div class="User Menu">
-                        <ul class="rightside">
-                            <a href="/Login/index.html"><img src="/assets/user 1.png" alt="Login"></a>
-                            <a href=""><img src="/assets/basket 1.png" alt="Carrinho"></a>
-                        </ul>
-                    </div>
+
+                            <ul class="rightside">
+
+                                <li class="perfil">
+                                    <a href="/Login/index.html" id="loginLink">
+                                        <img src="/assets/user 1.png" alt="Login">
+                                    </a>
+
+                                    <div class="menuUsuario" id="menuUsuario">
+
+                                        <p id="nomeUsuario"></p>
+
+                                        <a href="/Perfil/perfil.html">Meu Perfil</a>
+
+                                        <a href="/Pedidos/pedidos.html">Meus Pedidos</a>
+
+                                        <button id="logout">Sair</button>
+
+                                    </div>
+
+                                </li>
+
+                                <li>
+                                    <a href="#">
+                                        <img src="/assets/basket 1.png" alt="Carrinho">
+                                    </a>
+                                </li>
+
+                            </ul>
+                        </div>
     </header>
 
     <main>
@@ -39,7 +64,7 @@
                 <div class="leftside">
                     <h1>Delicioso Sorvete</h1>
                     <p>Espalhando felicidade, uma casquinha de cada vez. 🍦</p>
-                    <a href="" class="button">Sobre-nos!</a>
+                    <a href="#" class="button" id="abrirModal">Sobre nós!</a>
                     <a href="/Sorvetes/sabores.html" class="button">Fazer Pedido!!</a>
                 </div>
                 <div class="rightside">
@@ -57,5 +82,54 @@
             <p>© 2026 ICECREAM - Todos os direitos reservados.</p>
         </div>
     </footer>
+
+    
+    <div class="modal" id="modalSobre">
+        
+    <div class="modal-content">
+        
+        <span class="fechar">&times;</span>
+
+        <h2>🍦 Sobre a IceCream</h2>
+        
+        <p>
+            Bem-vindo à <strong>IceCream</strong>!
+            Nosso objetivo é transformar cada sorvete em um momento especial.
+        </p>
+        
+        <p>
+            Trabalhamos com ingredientes de qualidade,
+            sabores exclusivos e muito carinho para oferecer
+            a melhor experiência aos nossos clientes.
+        </p>
+        
+        <div class="cards">
+            
+            <div class="card">
+                🍓
+                <h3>Ingredientes Frescos</h3>
+                <p>Selecionados diariamente.</p>
+            </div>
+            
+            <div class="card">
+                🍫
+                <h3>Sabores Artesanais</h3>
+                <p>Receitas exclusivas.</p>
+            </div>
+            
+            <div class="card">
+                ❤️
+                <h3>Feito com Amor</h3>
+                <p>Porque felicidade combina com sorvete.</p>
+            </div>
+            
+        </div>
+        
+    </div>
+    
+</div>
+
+<script src="script.js"></script>
+
 </body>
 </html>

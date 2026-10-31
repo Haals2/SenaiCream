@@ -16,7 +16,8 @@
 <div class="container">
 
     <div class="left">
-    <video
+
+<video
     autoplay
     muted
     loop
@@ -25,22 +26,27 @@
 >
     <source src="/Login/assets/pin-on-hd-auto-.mp4" type="video/mp4">
 </video>
+
 </div>
 
     <div class="right">
 
         <h1>LOGIN</h1>
 
-        <form>
+                <div id="mensagem" class="mensagem"></div>
+
+        <form id="loginForm">
 
             <div class="input-box">
 
                 <label>Email ou ID</label>
 
                 <input
-                type="text"
-                placeholder="Username">
-
+                    id="email"
+                    type="email"
+                    placeholder="Digite seu e-mail"
+                    required
+                >
             </div>
 
             <div class="input-box">
@@ -48,22 +54,24 @@
                 <label>Senha</label>
 
                 <input
-                type="password"
-                placeholder="Password">
-
+                        id="senha"
+                        type="password"
+                        placeholder="Digite sua senha"
+                        required
+                    >
             </div>
+
             <div class="LoginClass">
-            <a href="/index.html" class="button">Entrar</a>
+                <button type="submit" class="button">Entrar</button>
             </div>
             
-
         </form>
 
         <div class="links">
 
-            <a href="#">Esqueceu sua senha?</a>
+            <a href="esqueceuSenha.html">Esqueceu sua senha?</a>
 
-            <a href="#">Criar conta</a>
+            <a href="cadastro.html">Criar conta</a>
 
         </div>
 
@@ -80,6 +88,8 @@
     </div>
 
 </div>
+
+<script src="script.js"></script>
 
 </body>
 </html>
